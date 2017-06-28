@@ -71,7 +71,7 @@ public class SnackbarOnAnyDeniedMultiplePermissionsListener
       snackbar.setAction(buttonText, onButtonClickListener);
     }
     if (snackbarCallback != null) {
-      snackbar.setCallback(snackbarCallback);
+      snackbar.addCallback(snackbarCallback);
     }
     snackbar.show();
   }
