@@ -23,6 +23,8 @@ import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
+import android.support.v4.content.ContextCompat;
+
 import com.karumi.dexter.MultiplePermissionsReport;
 
 /**
@@ -122,7 +124,7 @@ public class DialogOnAnyDeniedMultiplePermissionsListener extends BaseMultiplePe
     }
 
     public Builder withIcon(@DrawableRes int resId) {
-      this.icon = context.getResources().getDrawable(resId);
+      this.icon = ContextCompat.getDrawable(context, resId);
       return this;
     }
 
